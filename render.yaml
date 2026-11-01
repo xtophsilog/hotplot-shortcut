@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: hotplot-shortcut
+    runtime: static
+    staticPublishPath: .
+    headers:
+      - path: /sw.js
+        name: Cache-Control
+        value: no-cache
+      - path: /manifest.json
+        name: Content-Type
+        value: application/manifest+json
